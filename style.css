@@ -160,3 +160,32 @@ button:active {
     box-shadow: e 0 0.6em 0.25em var(--glow-color), 0 0 2.5em 2em var(--glow-spread-color),
     inset 0 0 0.5em 0.25em var(--glow-color);
 }
+.graphing{
+    display: flex;
+    position: relative;
+    aspect-ratio: 1/1;
+    margin: auto;
+    width: 6vw;
+    background: linear-gradient(rgb(150, 41, 228), rgb(81, 9, 110));
+    border-radius: 50%;
+    justify-content: center;
+}
+.graphing a{
+    position: absolute;
+    transform: translateY(10px);
+    justify-content: center;
+    border-radius: 50%;
+    height: 65%;
+    aspect-ratio: 1/1;
+    display:flex;
+}
+.graphing a img{
+    filter: invert(80%) sepia(23%) saturate(1500%) 
+    hue-rotate(240deg) brightness(40%) contrast(60%);
+}
+.text{
+    color: aliceblue;
+    font-size: large;
+    justify-content: center;
+    display: flex;
+}
