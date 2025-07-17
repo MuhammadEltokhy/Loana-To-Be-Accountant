@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Bizzare';
+    src: url('../Bizzare-GzwP.ttf');
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bizzare', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+.bg{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.container{
+    align-items: center;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    z-index: 100;
+    background: transparent;
+    border: 2px solid rgb(127, 107, 232);
+    border-radius: 45px;
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 5px 6px rgba(217, 199, 255, 0.689);
+}
+.bg-clib{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;    
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+}
+.container p{
+    font-size:xx-large;
+    text-align: center;
+    color: aliceblue;
+}
+.container form{
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    scale: 1.15;
+}
+.inputbox{
+    position: relative;
+    width: 250px;
+}
+.inputbox input{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid rgb(166, 55, 206);
+    display: flex;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1em;
+    color: rgb(129, 57, 196);
+    box-shadow: 0 8px 32px rgba(217, 199, 255, 0.689);
+}
+.inputbox span{
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    top : 0;
+    z-index: 105;
+    opacity: 0.5;
+    text-transform:uppercase;
+    font-size: 0.82em;
+}
+
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span{
+    color: blueviolet;
+    transform: translateX(10px) translateY(-7px);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: 0.4s all ease-in-out;
+    font-size: 0.6em;
+    padding: 1px 10px;
+    margin-left: 8px;
+    background: white;
+    border-left: 1px solid rgb(158, 68, 242);
+    text-transform: initial;
+    border-right: 1px solid rgb(158, 68, 242);
+    letter-spacing: 0.2em;
+    opacity: 1.0;
+    background: rgb(158, 68, 242);
+    color: rgb(44, 242, 216);
+    border-radius: 3px;
+}
+.checkbox{
+    background: linear-gradient(rgba(45, 25, 163, 0.553), rgba(76, 10, 156, 0.652));
+    color: whitesmoke;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 1.2px solid rgb(65, 171, 233);
+    border-radius: 15px;
+}
+.checkbox label:nth-child(1){
+    display: block;
+}
+
+button {
+    --glow-color:rgb(112, 59, 218);
+    --glow-spread-color: rgba(110, 33, 183, 0.741);
+    --enhanced-glow-color: rgba(86, 14, 152, 0.811);
+    --btn-color: rgba(84, 19, 144, 0.755);
+    border: 0.2em solid var(--glow-color);
+    padding: 12px 10px;
+    color: var(--glow-color);
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Bizzare', sans-serif;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em 0.25em var(--glow-color), 00 4em lem var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+    text-shadow: 0 0 0.5em var(--glow-color);
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+button::after {
+    pointer-events: none;
+    content:"";
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: 0.7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 1em 0.2em var(--glow-color), 0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 0.em 0.2em var(--glow-color);
+}
+button:active {
+    box-shadow: e 0 0.6em 0.25em var(--glow-color), 0 0 2.5em 2em var(--glow-spread-color),
+    inset 0 0 0.5em 0.25em var(--glow-color);
+}

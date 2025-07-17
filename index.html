@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#5c0707">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Muhammad Eltokhy">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="../loan-calculator/style.css">
+    <title>Compound-Ratio</title>
+</head>
+<body>
+    <script src="index.js"></script>
+    <div class="bg">
+        <video autoplay loop muted plays-inline class="bg-clib">
+            <source src="bg.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <p>Your Ultimate Loan Calculator</p>
+            <form>
+                <div class="inputbox">
+                    <input type="text" required="required">
+                    <span>Name Here</span>
+                </div>
+                <div class="inputbox">
+                    <input type="number" min="1" required="required">
+                    <span>Aspect loan  in $</span>
+                </div>
+                <div class="inputbox">
+                    <input type="number" min="0" required="required">
+                    <span>Interest rate of change in %</span>
+                </div>
+                <div class="inputbox">
+                    <input type="number" min="1" required="required">
+                    <span>Months to pay per year</span>
+                </div>
+                <div class="inputbox">
+                    <input type="number" min="0" required="required">
+                    <span>How many years?</span>
+                </div>
+                <div class="checkbox">
+                    <label>How will your loan change?</label>
+                    <input type="radio" id="growth" name="change" value="Growth" required="required">
+                    <label for="growth">Growth 📈</label>
+                    <input type="radio" id="decay" name="change" value="Decay" required="required">
+                    <label for="decay">Decay 📉</label>
+                </div>
+                <button class="button">
+                    <span>
+                        Calculate
+                    </span>
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
