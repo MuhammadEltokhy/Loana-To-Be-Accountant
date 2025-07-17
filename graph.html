@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#5c0707">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Muhammad Eltokhy">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="graph.css">
+    <title>Grapher</title>
+</head>
+<body>
+  <div id="header">
+    <h1>✨ Interest Grapher ✨</h1>
+  </div>
+
+  <div id="controls">
+    <div class="mode-buttons">
+      <button id="btn-simple" class="active">Simple Interest</button>
+      <button id="btn-compound">Compound Interest</button>
+    </div>
+
+    <div class="slider-container">
+      <div class="slider-row fade-in">
+        <label>P</label>
+        <input type="range" id="slider-P" min="100" max="10000" step="100" value="1000">
+        <span class="slider-value" id="val-P">1000</span>
+      </div>
+
+      <div class="slider-row fade-in">
+        <label>r%</label>
+        <input type="range" id="slider-r" min="0" max="20" step="0.1" value="5">
+        <span class="slider-value" id="val-r">5</span>
+      </div>
+
+      <div class="slider-row fade-in">
+        <label>t</label>
+        <input type="range" id="slider-t" min="1" max="20" step="1" value="10">
+        <span class="slider-value" id="val-t">10</span>
+      </div>
+
+      <div class="slider-row slide-in" id="row-n" style="display:none">
+        <label>n</label>
+        <input type="range" id="slider-n" min="1" max="12" step="1" value="4">
+        <span class="slider-value" id="val-n">4</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="graph-container">
+    <canvas id="graph"></canvas>
+  </div>
+
+  <script src="graph.js">
+  </script>
+</body>
+</html>
